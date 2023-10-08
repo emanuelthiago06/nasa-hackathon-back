@@ -22,3 +22,9 @@ def select_points(request, **kwargs):
 def add_points(request, **kwargs):
     map_controller = MapController(request=request, kwargs=kwargs)
     return map_controller.create_point()
+
+
+
+def monitor_api(request, **kwargs):
+    return render(request, 'grafico.html')
+    
