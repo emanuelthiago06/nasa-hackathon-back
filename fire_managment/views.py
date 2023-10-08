@@ -24,7 +24,13 @@ def add_points(request, **kwargs):
     return map_controller.create_point()
 
 
-
-def monitor_api(request, **kwargs):
-    return render(request, 'grafico.html')
+@api_view(['POST'])
+def monitor_area(request, **kwargs):
+    map_controller = MapController(request=request, kwargs=kwargs)
+    return map_controller.monitorar_area()
     
+
+@api_view(['POST'])
+def register_user(request, **kwargs):
+    map_controller = MapController(request=request, kwargs= kwargs)
+    return map_controller.register_user()

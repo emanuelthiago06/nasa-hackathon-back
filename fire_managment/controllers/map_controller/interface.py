@@ -22,3 +22,11 @@ class MonitoringPayload(BaseModel):
     latitude: int
     longitude: int
     distancia: int
+
+
+class DefineUser(BaseModel):
+    user_id: int
+    x_1: int
+    X_2: int
+    y_1: int
+    y_2: int
